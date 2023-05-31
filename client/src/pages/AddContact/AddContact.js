@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { addContact } from '../../JS/Actions/contact';
+import {Helmet} from "react-helmet";
 
 
 const AddContact = () => {
@@ -36,6 +37,15 @@ const AddContact = () => {
 
   return (
     <div>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Add contact</title>
+          <link rel="canonical" />
+          <meta
+          name="description"
+          content="add contact"
+        />
+      </Helmet>
     <h1>Add contact</h1>
 
     <TextField id="standard-basic" label="Name" variant="standard"  onChange={handleChange} type="text" name="name" />
